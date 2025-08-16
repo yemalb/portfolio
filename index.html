@@ -61,7 +61,7 @@
       color: var(--text-color);
     }
 
-    /* Responsive Navigation for Mobile */
+    /* Responsive Navigation */
     @media (max-width: 800px) {
       header {
         flex-wrap: wrap;
@@ -84,12 +84,15 @@
     }
 
     section {
-      padding: 4rem 2rem;
+      padding: 3rem 2rem;
       max-width: 900px;
       margin: auto;
     }
     h1, h2 {
       color: var(--accent-color);
+    }
+    p {
+      text-align: justify;
     }
 
     .hero {
@@ -98,8 +101,7 @@
     }
     .hero img {
       width: 150px;
-      height: auto;
-      max-height: 150px;
+      height: 150px;
       border-radius: 50%;
       margin-bottom: 1rem;
       object-fit: cover;
@@ -119,6 +121,13 @@
     }
     .card:hover {
       transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 0.5rem 0;
+      object-fit: cover;
     }
 
     .skills span {
@@ -153,13 +162,113 @@
       <a href="#skills">Skills</a>
       <a href="#recommendations">Recommendations</a>
       <a href="#resume">Resume & Cover Letter</a>
+      <a href="#references">References</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
   </header>
 
-  <!-- Sections (unchanged) -->
-  <!-- Your existing sections go here... -->
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <img src="images/profile.jpg" alt="Profile Picture">
+    <h1>Yemal Bandara</h1>
+    <p>Mechanical Engineer | Product Designer | Mechatronics</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <!-- ROSE Prep -->
+      <div class="card">
+        <h3>ROSE Prep™ – Automated Sample Preparation</h3>
+        <p>Worked with <a href="https://asp-health.com/rose/" target="_blank">ASP Health</a> to design and develop ROSE Prep™, a fully automated sample preparation system for rapid on-site evaluation (ROSE) procedures. I contributed to the design of mobile instruments, consumables preventing cross-contamination, and unique specimen vials to improve diagnostic accuracy.</p>
+        <img src="images/roseprep1.jpg" alt="ROSE Prep">
+        <img src="images/roseprep2.jpg" alt="ROSE Prep 2">
+      </div>
+
+      <!-- APAS Independence -->
+      <div class="card">
+        <h3>APAS® Independence</h3>
+        <p>Contributed to the design and refinement of the <a href="https://www.cleverculturesystems.com/technology/intelligent-automation/apas-independence" target="_blank">APAS® Independence</a>, an automated plate reader for microbiology. My role involved mechanical design improvements, manufacturing support, and optimizing assembly for high-volume production.</p>
+        <ul>
+          <li>Designed robust, user-safe mechanical components.</li>
+          <li>Implemented manufacturing design changes for large-scale production.</li>
+          <li>Improved serviceability and reliability of mechanical assemblies.</li>
+        </ul>
+      </div>
+
+      <!-- Automotive Restoration -->
+      <div class="card">
+        <h3>Automotive Restoration</h3>
+        <p>Hands-on restoration of classic cars, including mechanical repairs, component design, and custom fabrication.</p>
+        <img src="images/auto1.jpg" alt="Automotive Restoration 1">
+        <img src="images/auto2.jpg" alt="Automotive Restoration 2">
+        <img src="images/auto3.jpg" alt="Automotive Restoration 3">
+        <img src="images/auto4.jpg" alt="Automotive Restoration 4" style="object-fit: contain;">
+      </div>
+
+      <!-- Smart Backpack -->
+      <div class="card">
+        <h3>Smart Backpack</h3>
+        <p>Led a university team project to develop a smart backpack with integrated electronics for safety and convenience. Responsible for overall design and CAD modeling.</p>
+        <img src="images/backpack.jpg" alt="Smart Backpack">
+      </div>
+
+      <!-- Dermapen -->
+      <div class="card">
+        <h3>Dermapen® Microneedling System</h3>
+        <p>Contributed to design optimization of the Dermapen® Microneedling system, incorporating elastomeric spring technology for durability and integrating a patented anti-backflow mechanism for user safety. Device achieved 95%+ customer satisfaction in clinical use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>Mechanical Engineer with experience at Planet Innovation, working on medical device design, product development, and large-scale manufacturing support.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Mechanical Design</span>
+      <span>CAD (SolidWorks, Fusion 360)</span>
+      <span>Finite Element Analysis</span>
+      <span>Product Development</span>
+      <span>Python & Embedded Systems</span>
+      <span>Prototyping</span>
+    </div>
+  </section>
+
+  <!-- Recommendations -->
+  <section id="recommendations">
+    <h2>Recommendations</h2>
+    <p>Available upon request or via LinkedIn endorsements.</p>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume & Cover Letter</h2>
+    <p><a href="documents/Yemal_Bandara_Resume.pdf" target="_blank">📄 View Resume</a></p>
+    <p><a href="documents/Yemal_Bandara_Cover_Letter.pdf" target="_blank">📄 View Cover Letter</a></p>
+  </section>
+
+  <!-- References -->
+  <section id="references">
+    <h2>References</h2>
+    <img src="images/references.jpg" alt="References">
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yemalbandara@gmail.com">yemalbandara@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yemal-bandara-526340b8/" target="_blank">Yemal Bandara</a></p>
+    <p>GitHub: <a href="https://github.com/yemalb" target="_blank">github.com/yemalb</a></p>
+  </section>
 
   <footer>
     <p>© 2025 Yemal Bandara</p>
