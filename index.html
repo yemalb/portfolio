@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yemal Bandara | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --accent-color: #004080;
+      --card-bg: #f7f7f7;
+    }
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --accent-color: #3399ff;
+      --card-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      background-color: var(--bg-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    header nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+    }
+    header nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .dark-toggle {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--text-color);
+      border-radius: 8px;
+      background: none;
+      color: var(--text-color);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: var(--accent-color);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skills span {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--card-bg);
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--card-bg);
+    }
+    footer a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Yemal Bandara</strong></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <section id="about" class="hero">
+    <img src="https://via.placeholder.com/150" alt="Yemal Bandara">
+    <h1>Mechanical Engineer | Product Design | Mechatronics</h1>
+    <p>I’m Yemal Bandara, a Mechanical Engineer with experience in product design, CAD modeling, and mechatronics systems. Passionate about creating innovative solutions that merge engineering and technology.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>ROSE Prep™ System</h3>
+        <p>Automated sample preparation solution for Rapid On-Site Evaluation (ROSE) procedures.</p>
+        <ul>
+          <li>Developed mobile, automated instrument with intuitive UI</li>
+          <li>Designed consumables to prevent cross-contamination</li>
+          <li>Built 100+ units ensuring efficient production</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Smart Backpack</h3>
+        <p>IoT-enabled smart backpack designed at Deakin University, where I led the team.</p>
+        <ul>
+          <li>Integrated sensors for smart functionality</li>
+          <li>Led team in design & prototyping</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Automotive Restoration</h3>
+        <p>Personal project restoring classic vehicles, combining mechanical engineering with hands-on craftsmanship.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Planet Innovation Pty Ltd</strong> – Mechanical Engineer / Associate Engineer</li>
+      <li><strong>Stretchlines Pvt Ltd</strong> – Design Engineer Intern</li>
+      <li><strong>Deakin University</strong> – Smart Backpack Project Lead</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>CAD (SolidWorks, Fusion 360)</span>
+      <span>Python (incl. CNNs)</span>
+      <span>Embedded Systems (Arduino, STM32, Raspberry Pi, PLCs)</span>
+      <span>Product Design & Prototyping</span>
+      <span>Manufacturing Processes</span>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a href="resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yemal.bandara@example.com">yemal.bandara@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yemalbandara" target="_blank">linkedin.com/in/yemalbandara</a></p>
+    <p>GitHub: <a href="https://github.com/yemalbandara" target="_blank">github.com/yemalbandara</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Yemal Bandara</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
