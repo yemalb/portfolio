@@ -72,9 +72,11 @@
     }
     .hero img {
       width: 150px;
-      height: 150px;
+      height: auto;        /* keeps original aspect ratio */
+      max-height: 150px;   /* ensures it doesn't get too tall */
       border-radius: 50%;
       margin-bottom: 1rem;
+      object-fit: cover;   /* fills the circle nicely */
     }
 
     .projects {
