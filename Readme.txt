@@ -1,7 +1,7 @@
 # Yemal Bandara – Portfolio Website
 
 This is my personal portfolio website, hosted on **GitHub Pages** at:  
-👉 [https://yemalbandara.github.io](https://yemalbandara.github.io)
+👉 [https://yemalb.github.io/portfolio/)
 
 ---
 
@@ -10,3 +10,4 @@ I am a Mechanical Engineer with experience in **product design, mechatronics, an
 This portfolio showcases my projects, skills, and professional journey.
 
 ---
+
