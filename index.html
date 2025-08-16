@@ -3,286 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yemal Bandara | Portfolio</title>
+  <title>Yemal Bandara - Portfolio</title>
   <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #222222;
-      --accent-color: #004080;
-      --card-bg: #f7f7f7;
-    }
-    body.dark-mode {
-      --bg-color: #121212;
-      --text-color: #f0f0f0;
-      --accent-color: #3399ff;
-      --card-bg: #1e1e1e;
-    }
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
-      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
+      background: #222;
+      color: #fff;
+      padding: 15px 20px;
       position: sticky;
       top: 0;
-      background-color: var(--bg-color);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       z-index: 1000;
     }
 
-    header nav {
+    nav {
       display: flex;
-      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    header nav a {
+
+    nav a {
+      color: #fff;
       text-decoration: none;
-      color: var(--text-color);
+      margin: 5px 15px;
       font-weight: bold;
-    }
-    header nav a:hover {
-      color: var(--accent-color);
+      transition: color 0.3s ease;
     }
 
-    .dark-toggle, .menu-toggle {
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      border: 1px solid var(--text-color);
-      border-radius: 8px;
-      background: none;
-      color: var(--text-color);
-    }
-
-    /* Responsive Navigation */
-    @media (max-width: 800px) {
-      header {
-        flex-wrap: wrap;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 0.5rem;
-      }
-      .nav-links a {
-        margin: 0.5rem 0;
-      }
-      .menu-toggle {
-        display: inline-block;
-      }
-      .nav-links.active {
-        display: flex;
-      }
+    nav a:hover {
+      color: #f39c12;
     }
 
     section {
-      padding: 3rem 2rem;
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
+      background: #fff;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
-    h1, h2 {
-      color: var(--accent-color);
-    }
-    p {
-      text-align: justify;
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
     }
 
     .hero {
       text-align: center;
-      padding: 6rem 2rem;
     }
+
     .hero img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      margin-bottom: 1rem;
+      margin-bottom: 15px;
       object-fit: cover;
     }
 
-    .projects {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      max-width: 100%;
-      height: auto;
+    .projects .card {
+      background: #f4f4f4;
+      margin-bottom: 20px;
+      padding: 20px;
       border-radius: 8px;
-      margin: 0.5rem 0;
-      object-fit: cover;
+    }
+
+    .projects .card h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
 
     .skills span {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: var(--card-bg);
-      border-radius: 20px;
-      font-size: 0.9rem;
+      background: #eee;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 0.9em;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      border-top: 1px solid var(--card-bg);
+    ul {
+      padding-left: 20px;
     }
-    footer a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: var(--accent-color);
+
+    /* Responsive menu at 800px */
+    @media (max-width: 800px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 8px 0;
+      }
+
+      .projects .card img {
+        width: 100% !important;
+        max-width: 300px !important;
+      }
+
+      .hero img {
+        width: 120px;
+        height: 120px;
+      }
     }
   </style>
 </head>
 <body>
-   <header>
-    <div><strong>Yemal Bandara</strong></div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#recommendations">Recommendations</a>
-      <a href="#resume">Resume & Cover Letter</a>
-      <a href="#references">References</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <img src="images/profile.jpg" alt="Profile Picture">
-    <h1>Yemal Bandara</h1>
-    <p>Mechanical Engineer | Product Designer | Mechatronics</p>
-  </section>
+<header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#recommendations">Recommendations</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
+<section id="about" class="hero">
+  <img src="assets/profile.jpg" alt="Yemal Bandara">
+  <h1>Mechanical Engineer | Product Design | Mechatronics</h1>
+  <p style="text-align: justify;">
+    I’m Yemal Bandara, a dedicated Mechatronics Engineer with 5+ years of expertise in product design, CAD modeling, and engineering analysis (including DFM, FMEA & FEA). Proven track record of delivering innovative and efficient design solutions in the medical equipment manufacturing industry. Analytical and performance-driven Engineer with extensive experience in mechanical engineering. Evaluates designs and implements new technologies to produce innovative equipment. Possesses proven track record of creating successful and cost-efficient designs.
+  </p>
+</section>
 
-      <!-- ROSE Prep -->
-      <div class="card">
-        <h3>ROSE Prep™ – Automated Sample Preparation</h3>
-        <p>Worked with <a href="https://asp-health.com/rose/" target="_blank">ASP Health</a> to design and develop ROSE Prep™, a fully automated sample preparation system for rapid on-site evaluation (ROSE) procedures. I contributed to the design of mobile instruments, consumables preventing cross-contamination, and unique specimen vials to improve diagnostic accuracy.</p>
-        <img src="images/roseprep1.jpg" alt="ROSE Prep">
-        <img src="images/roseprep2.jpg" alt="ROSE Prep 2">
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <!-- APAS Independence -->
+    <div class="card">
+      <h3>APAS Independence</h3>
+      <div class="apas-images" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
+        <img src="assets/apas1.jpg" alt="Apas System 1" style="width:48%; max-width:200px; border-radius:8px;">
+        <img src="assets/apas2.jpg" alt="Apas System 2" style="width:48%; max-width:200px; border-radius:8px;">
       </div>
-
-      <!-- APAS Independence -->
-      <div class="card">
-        <h3>APAS® Independence</h3>
-        <p>Contributed to the design and refinement of the <a href="https://www.cleverculturesystems.com/technology/intelligent-automation/apas-independence" target="_blank">APAS® Independence</a>, an automated plate reader for microbiology. My role involved mechanical design improvements, manufacturing support, and optimizing assembly for high-volume production.</p>
-        <ul>
-          <li>Designed robust, user-safe mechanical components.</li>
-          <li>Implemented manufacturing design changes for large-scale production.</li>
-          <li>Improved serviceability and reliability of mechanical assemblies.</li>
-        </ul>
-      </div>
-
-      <!-- Automotive Restoration -->
-      <div class="card">
-        <h3>Automotive Restoration</h3>
-        <p>Hands-on restoration of classic cars, including mechanical repairs, component design, and custom fabrication.</p>
-        <img src="images/auto1.jpg" alt="Automotive Restoration 1">
-        <img src="images/auto2.jpg" alt="Automotive Restoration 2">
-        <img src="images/auto3.jpg" alt="Automotive Restoration 3">
-        <img src="images/auto4.jpg" alt="Automotive Restoration 4" style="object-fit: contain;">
-      </div>
-
-      <!-- Smart Backpack -->
-      <div class="card">
-        <h3>Smart Backpack</h3>
-        <p>Led a university team project to develop a smart backpack with integrated electronics for safety and convenience. Responsible for overall design and CAD modeling.</p>
-        <img src="images/backpack.jpg" alt="Smart Backpack">
-      </div>
-
-      <!-- Dermapen -->
-      <div class="card">
-        <h3>Dermapen® Microneedling System</h3>
-        <p>Contributed to design optimization of the Dermapen® Microneedling system, incorporating elastomeric spring technology for durability and integrating a patented anti-backflow mechanism for user safety. Device achieved 95%+ customer satisfaction in clinical use.</p>
-      </div>
+      <p>Advanced AI-driven laboratory automation system developed by Clever Culture Systems to automate imaging, interpretation, and reporting of microbial growth on culture plates.</p>
+      <ul>
+        <li>Designed and refined mechanical components for automated microbiology sample processing.</li>
+        <li>Developed 3D CAD models and detailed drawings for precision assembly and manufacturability.</li>
+        <li>Optimized part tolerances and fits for high repeatability in automated operations.</li>
+        <li>Selected materials and finishes to ensure durability, chemical resistance, and compliance with medical standards.</li>
+        <li>Collaborated with suppliers and manufacturers to improve production efficiency and reduce lead times.</li>
+        <li>Performed prototyping and iterative testing to validate design performance and ergonomics.</li>
+        <li>Integrated safety and maintenance features to minimize downtime and operational risk.</li>
+      </ul>
+      <p>Learn more: <a href="https://www.cleverculturesystems.com/technology/intelligent-automation/apas-independence" target="_blank">Clever Culture Systems - APAS Independence</a></p>
     </div>
-  </section>
 
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <p>Mechanical Engineer with experience at Planet Innovation, working on medical device design, product development, and large-scale manufacturing support.</p>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>Mechanical Design</span>
-      <span>CAD (SolidWorks, Fusion 360)</span>
-      <span>Finite Element Analysis</span>
-      <span>Product Development</span>
-      <span>Python & Embedded Systems</span>
-      <span>Prototyping</span>
+    <!-- Dermapen -->
+    <div class="card">
+      <h3>Dermapen® Microneedling System</h3>
+      <div class="dermapen" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
+        <img src="assets/dermapen1.jpg" alt="Dermapen System 1" style="width:48%; max-width:200px; border-radius:8px;">
+        <img src="assets/dermapen2.jpg" alt="Dermapen System 2" style="width:48%; max-width:200px; border-radius:8px;">
+      </div>
+      <p>Consumer-oriented microneedling device designed for safe and effective skincare treatment.</p>
+      <ul>
+        <li>Optimized mechanical performance incorporating elastomeric spring technology for durability.</li>
+        <li>Integrated patented anti-backflow mechanism for user safety.</li>
+        <li>Device met rigorous clinical standards for reliability and performance.</li>
+        <li>Achieved over 95% customer satisfaction through ergonomic design and reliability.</li>
+        <li>Contributed to design refinement and prototyping stages.</li>
+      </ul>
+      <p>Learn more: <a href="https://www.dermapenworld.com/en-au/products/dermapen-home" target="_blank">Dermapen World</a></p>
     </div>
-  </section>
 
-  <!-- Recommendations -->
-  <section id="recommendations">
-    <h2>Recommendations</h2>
-    <p>Available upon request or via LinkedIn endorsements.</p>
-  </section>
+    <!-- ROSE Prep -->
+    <div class="card">
+      <h3>ROSE Prep™ System</h3>
+      <div class="rose-images" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
+        <img src="assets/roseprep1.jpg" alt="ROSE Prep™ System 1" style="width:48%; max-width:200px; border-radius:8px;">
+        <img src="assets/roseprep2.jpg" alt="ROSE Prep™ System 2" style="width:48%; max-width:200px; border-radius:8px;">
+      </div>
+      <p>Automated sample preparation solution for Rapid On-Site Evaluation (ROSE) procedures, developed in collaboration with ASP Health.</p>
+      <ul>
+        <li>Designed and built over 100 units for ASP Health's ROSE Prep™ program</li>
+        <li>Integrated mobile automation with intuitive UI for seamless operation</li>
+        <li>Ensured cross-contamination prevention through custom consumables</li>
+        <li>Recognized with the Australian Good Design Award in 'Medical and Scientific' category</li>
+      </ul>
+      <p>Learn more: <a href="https://asp-health.com/rose/" target="_blank">ASP Health ROSE Prep™</a></p>
+    </div>
 
-  <!-- Resume -->
-  <section id="resume">
-    <h2>Resume & Cover Letter</h2>
-    <p><a href="documents/Yemal_Bandara_Resume.pdf" target="_blank">📄 View Resume</a></p>
-    <p><a href="documents/Yemal_Bandara_Cover_Letter.pdf" target="_blank">📄 View Cover Letter</a></p>
-  </section>
+    <!-- Smart Backpack -->
+    <div class="card">
+      <h3>Smart Backpack</h3>
+      <img src="assets/smart-backpack.jpg" alt="Smart Backpack" style="width:80%; max-width:400px; border-radius:8px; margin: 0 auto 10px; display:block;">
+      <p>IoT-enabled smart backpack designed at Deakin University, where I led the team.</p>
+      <ul>
+        <li>Integrated sensors for smart functionality</li>
+        <li>Led team in design & prototyping</li>
+      </ul>
+    </div>
 
-  <!-- References -->
-  <section id="references">
-    <h2>References</h2>
-    <img src="images/references.jpg" alt="References">
-  </section>
+    <!-- Automotive -->
+    <div class="card">
+      <h3>Automotive Restoration</h3>
+      <div class="auto-images" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:10px;">
+        <img src="assets/car1.jpg" alt="Car Restoration 1" style="width:48%; max-width:200px; border-radius:8px; object-fit:cover;">
+        <img src="assets/car2.jpg" alt="Car Restoration 2" style="width:48%; max-width:200px; border-radius:8px; object-fit:cover;">
+        <img src="assets/car3.jpg" alt="Car Restoration 3" style="width:48%; max-width:200px; border-radius:8px; object-fit:cover;">
+        <img src="assets/car4.jpg" alt="Car Restoration 4" style="width:48%; max-width:200px; border-radius:8px; object-fit:cover;">
+      </div>
+      <p>Personal project restoring classic vehicles, combining mechanical engineering with hands-on craftsmanship.</p>
+    </div>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:yemalbandara@gmail.com">yemalbandara@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yemal-bandara-526340b8/" target="_blank">Yemal Bandara</a></p>
-    <p>GitHub: <a href="https://github.com/yemalb" target="_blank">github.com/yemalb</a></p>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 Yemal Bandara</p>
-  </footer>
+<section id="experience">
+  <h2>Experience</h2>
+  <ul>
+    <li><strong>Planet Innovation Pty Ltd</strong> – Design & Manufacturing Mechanical Engineer</li>
+    <li><strong>Stretchlines Pvt Ltd</strong> – Mechanical Design Engineer Intern</li>
+    <li><strong>Deakin University</strong> – Team Lead - Mechanical</li>
+  </ul>
+</section>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>CAD (SolidWorks, Fusion 360)</span>
+    <span>Python (incl. CNNs)</span>
+    <span>Embedded Systems (Arduino, STM32, Raspberry Pi, PLCs)</span>
+    <span>Product Design & Prototyping</span>
+    <span>Manufacturing Processes</span>
+    <span>GD&T</span>
+    <span>Technical Reports/ Drawings</span>
+    <span>Power Machinery (incl. Lathe, Milling, Sheet Metal Bending, Guillotine)</span>
+    <span>FMEA/ FEA</span>
+    <span>Commissioning</span>
+  </div>
+</section>
 
-    function toggleMenu() {
-      const nav = document.querySelector('.nav-links');
-      nav.classList.toggle('active');
-    }
-  </script>
+<section id="recommendations">
+  <h2>Recommendations</h2>
+  <img src="assets/recommendations.jpg" alt="References" style="width:100%; border-radius:8px; margin-top:10px;">
+</section>
+
+<section id="resume">
+  <h2>Resume & Cover Letter</h2>
+  <p><a href="resume.pdf" target="_blank">Download My Resume</a></p>
+  <p><a href="cover.pdf" target="_blank">Download My Cover Letter</a></p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:yemalbandara@gmail.com">yemalbandara@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/yemal-bandara-526340b8/" target="_blank">Yemal Bandara</a></p>
+  <p>GitHub: <a href="https://github.com/yemalb" target="_blank">Github.com/Yemalb</a></p>
+</section>
+
 </body>
 </html>
