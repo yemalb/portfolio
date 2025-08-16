@@ -37,9 +37,8 @@
       background-color: var(--bg-color);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       z-index: 1000;
-      max-width: 800px; /* limit width for desktop */
-      margin: auto;
     }
+
     header nav {
       display: flex;
       gap: 1rem;
@@ -53,13 +52,35 @@
       color: var(--accent-color);
     }
 
-    .dark-toggle {
+    .dark-toggle, .menu-toggle {
       cursor: pointer;
       padding: 0.5rem 1rem;
       border: 1px solid var(--text-color);
       border-radius: 8px;
       background: none;
       color: var(--text-color);
+    }
+
+    /* Responsive Navigation for Mobile */
+    @media (max-width: 800px) {
+      header {
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+      .nav-links a {
+        margin: 0.5rem 0;
+      }
+      .menu-toggle {
+        display: inline-block;
+      }
+      .nav-links.active {
+        display: flex;
+      }
     }
 
     section {
@@ -119,42 +140,10 @@
       text-decoration: none;
       color: var(--accent-color);
     }
-
-    /* Hamburger menu for mobile */
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    @media screen and (max-width: 800px) {
-      header {
-        flex-wrap: wrap;
-        padding: 1rem;
-      }
-      header nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-        margin-top: 0.5rem;
-      }
-      header nav a {
-        margin: 0.5rem 0;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
+   <header>
     <div><strong>Yemal Bandara</strong></div>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav class="nav-links">
@@ -169,7 +158,12 @@
     <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
   </header>
 
-  <!-- Sections remain unchanged -->
+  <!-- Sections (unchanged) -->
+  <!-- Your existing sections go here... -->
+
+  <footer>
+    <p>© 2025 Yemal Bandara</p>
+  </footer>
 
   <script>
     function toggleDarkMode() {
@@ -177,7 +171,8 @@
     }
 
     function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('active');
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('active');
     }
   </script>
 </body>
