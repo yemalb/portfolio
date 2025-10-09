@@ -72,11 +72,11 @@
     }
     .hero img {
       width: 150px;
-      height: auto;        /* keeps original aspect ratio */
-      max-height: 150px;   /* ensures it doesn't get too tall */
+      height: auto;
+      max-height: 150px;
       border-radius: 50%;
       margin-bottom: 1rem;
-      object-fit: cover;   /* fills the circle nicely */
+      object-fit: cover;
     }
 
     .projects {
@@ -140,6 +140,7 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
+      <!-- existing cards ... -->
       <div class="card">
         <h3>APAS Independence</h3>
         <div class="apas-images" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
@@ -158,6 +159,7 @@
         </ul>
         <p>Learn more: <a href="https://www.cleverculturesystems.com/technology/intelligent-automation/apas-independence" target="_blank">Clever Culture Systems - APAS Independence</a></p>
       </div>
+
       <div class="card">
         <h3>Dermapen® Microneedling System</h3>
         <div class="dermapen" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
@@ -174,6 +176,7 @@
         </ul>
         <p>Learn more: <a href="https://www.dermapenworld.com/en-au/products/dermapen-home" target="_blank">Dermapen World</a></p>
       </div>
+
       <div class="card">
         <h3>ROSE Prep™ System</h3>
         <div class="rose-images" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
@@ -189,6 +192,7 @@
         </ul>
         <p>Learn more: <a href="https://asp-health.com/rose/" target="_blank">ASP Health ROSE Prep™</a></p>
       </div>
+
       <div class="card">
         <h3>Smart Backpack</h3>
         <img src="assets/smart-backpack.jpg" alt="Smart Backpack" style="width:80%; max-width:400px; border-radius:8px; margin: 0 auto 10px; display:block;">
@@ -198,6 +202,7 @@
           <li>Led team in design & prototyping</li>
         </ul>
       </div>
+
       <div class="card">
         <h3>Automotive Restoration</h3>
         <div class="auto-images" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:10px;">
@@ -208,6 +213,24 @@
         </div>
         <p>Personal project restoring classic vehicles, combining mechanical engineering with hands-on craftsmanship.</p>
       </div>
+
+      <!-- New Project: Switch OLED Mod with Picofly -->
+      <div class="card">
+        <h3>Switch OLED Mod with Picofly</h3>
+        <div class="switch-images" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
+          <img src="assets/switch1.jpg" alt="Switch mod 1" style="width:48%; max-width:200px; border-radius:8px;">
+          <img src="assets/switch2.jpg" alt="Switch mod 2" style="width:48%; max-width:200px; border-radius:8px;">
+        </div>
+        <p>Modified a Nintendo Switch OLED by integrating a Picofly modchip (RP2040-based) to enable homebrew capabilities while preserving core functionality.</p>
+        <ul>
+          <li>Designed routing path and placed the flex ribbon over the Switch’s SoC / RAM region for neat integration.</li>
+          <li>Performed precision microsoldering on fine pads, using flux and magnification tools.</li>
+          <li>Preloaded the Picofly firmware (.uf2) onto the RP2040 before installation to reduce errors during final setup.</li>
+          <li>Validated full system functionality post-install—Joy-Cons, display, USB, and network unaffected.</li>
+          <li>Documented process for repeatability and improved reliability in future mods.</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
